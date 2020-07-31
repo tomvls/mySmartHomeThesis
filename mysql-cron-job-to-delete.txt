@@ -1,0 +1,18 @@
+// SQL scripts to run on phpMyAdmin terminal and delete old sensor metrics
+CREATE EVENT DeleteOldMetrics
+    ON SCHEDULE
+      EVERY 1 DAY      
+    DO
+      DELETE FROM mydb.LivingRoom WHERE reg_date < NOW() - INTERVAL 1 DAY
+
+CREATE EVENT DeleteOldMetrics
+  ON SCHEDULE
+    EVERY 1 DAY      
+  DO 
+    DELETE FROM mydb.LivingRoom WHERE reg_date < NOW() - INTERVAL 1 DAY
+
+CREATE EVENT DeleteOldMetrics
+  ON SCHEDULE
+    EVERY 1 DAY      
+  DO
+    DELETE FROM mydb.LivingRoom WHERE reg_date < NOW() - INTERVAL 1 DAY
